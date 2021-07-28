@@ -1,0 +1,150 @@
+doctype html
+// Author - Tracy Crape
+// Student ID 420488
+// July 16, 2021
+// CPRG-008/210 - Web Application Concepts
+// Assignment 1 - Day 1 t0 7 Daily Exercises
+// Head
+head
+  // Required metadata
+  meta(charset='UTF-8')
+  meta(http-equiv='X-UA-Compatible' content='IE=edge')
+  meta(name='viewport' content='width=device-width, initial-scale=1.0')
+  // Bootstrap CSS
+  link(href='https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css' rel='stylesheet' integrity='sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC' crossorigin='anonymous')
+  // Bootstrap Tooltips
+  script.
+    var tooltipTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="tooltip"]'))
+    var tooltipList = tooltipTriggerList.map(function (tooltipTriggerEl) {return new bootstrap.Tooltip(tooltipTriggerEl)})
+  // JavaScript form lables on-focus
+  script(type='text/javascript').
+    $(document).ready(function(){
+    $("#name1").tooltip({
+    });
+    });
+  // Browser tab title
+  title Travel Experts
+  // Browser tab logo
+  link(rel='icon' href='./images/logo_te.png' alt='Travel Experts logo. Plane flying around the world')
+// Body
+// Navigation bar
+nav.navbar.navbar-expand-xl.bg-primary.navbar-dark.mb-4.py-2
+  .container
+    a.navbar-brand(href='#')
+      image(src='./images/logo_te_white.png' width='60' hieght='60' alt='Travel Experts logo. Plane flying around the world')
+    button.navbar-toggler(type='button' data-bs-toggle='collapse' data-bs-target='#navbarText' aria-controls='navbarText' aria-expanded='false' aria-label='Toggle navigation')
+      span.navbar-toggler-icon
+    #navbarText.collapse.navbar-collapse
+      .navbar-nav.ms-auto
+        a.nav-item.nav-link(href='./') Home
+        a.nav-item.nav-link(href='./packages') Travel Packages
+        a.nav-item.nav-link.active(aria-current='page' href='./register') Register
+        a.nav-item.nav-link(href='./about') About Us
+        a.nav-item.nav-link(href='./contact') Contact Us
+// Travel Experts logo
+header
+  .container-fluid.text-center
+    img.img(style='width: 150px' src='./images/logo_te.png' alt='Travel Experts logo. Plane flying around the world')
+  // Travel Experts title
+  h1.text-center.mt-4 Travel Experts
+  h5.text-center.fst-italic.mb-5.fw-bold Discover your new favourite destination!
+// Day 4/5 Registration form
+.container
+.row.text-center
+  .col-sm-6
+    h2.mb-5.mt-5 Create a new account
+    form(action='' method='get')
+      label
+        | First Name: 
+        br
+        input#name1.form-control(type='name' name='' title='Enter your first name' required='')
+      br
+      label
+        | Last Name: 
+        br
+        input#name1.form-control(type='name' name='' title='Enter your last name' required='')
+      br
+      label
+        | Address: 
+        br
+        input#name1.form-control(type='address' name='' title='Enter your street adress' required='')
+      br
+      label
+        | City: 
+        br
+        input#name1.form-control(type='city' name='' title='Enter your city' required='')
+      br
+      label
+        | Province: 
+        br
+        input#name1.form-control(type='text' name='' title='Enter your province' placeholder='AB' required='')
+      br
+      label
+        | Postal Code: 
+        br
+        input#name1.form-control(type='text' name='' title='Enter your postal code' pattern='[A-Za-z][0-9][A-Za-z] [0-9][A-Za-z][0-9]' placeholder='A1A 2B2' required='')
+      br
+      label
+        | Phone Number: 
+        br
+        input#name1.form-control(type='tel' name='' title='Enter your phone number' placeholder='403-555-1212' required='')
+      br
+      label
+        | Email: 
+        br
+        input#name1.form-control(type='email' name='' title='Enter your email' placeholder='name@example.com' required='')
+      br
+      label
+        | Password: 
+        br
+        input#name1.form-control(type='password' name='' title='Enter your password' required='')
+      br
+      input(type='submit' value='Send' onclick="return confirm('Do you want to submit your information?')")
+      input(type='reset' value='Reset' onclick="return confirm('Do you want to reset the form?')")
+      br
+  .col-sm-6
+    h2.mb-5.mt-5 Existing account, login
+    form(action='' method='get')
+      label
+        | Email: 
+        br
+        input#name1.form-control(type='email' name='' title='Enter your email' placeholder='name@example.com' required='')
+      br
+      label
+        | Password: 
+        br
+        input#name1.form-control(type='password' name='' title='Enter your password' required='')
+      br
+      input(type='submit' value='Submit' onclick="return confirm('Do you want to submit the form?')")
+// Footer / copywrite information
+footer.footer.mt-4.py-4.bg-primary
+  .container
+    .row
+      .col-sm.text-dark.text-center.fw-bold
+        | Travel Experts - Calgary
+        br
+        | 123 1st Street S.W.
+        br
+        | Calgary, Alberta
+        br
+        | 1-800-555-1212
+        br
+        | calgary@travelexperts.ca
+      .col-sm.text-dark.text-center.fw-bold
+        | &copy; Travel Experts
+        br
+        | (copyright 2021)
+        br
+        | All Rights Reserved.
+      .col-sm.text-dark.text-justify-left.text-center.fw-bold
+        | Travel Experts - Okotoks
+        br
+        | 456 2nd Avenue
+        br
+        | Okotoks, Alberta
+        br
+        | 1-800-222-1515
+        br
+        | okotoks@travelexperts.ca
+// Bootstrap / Popper
+script(src='https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js' integrity='sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM' crossorigin='anonymous')

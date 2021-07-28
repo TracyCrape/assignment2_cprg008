@@ -1,0 +1,82 @@
+doctype html
+// Author - Tracy Crape
+// Student ID 420488
+// July 16, 2021
+// CPRG-008/210 - Web Application Concepts
+// Assignment 1 - Day 1 t0 7 Daily Exercises
+// Head
+head
+  // Required metadata
+  meta(charset='UTF-8')
+  meta(http-equiv='X-UA-Compatible' content='IE=edge')
+  meta(name='viewport' content='width=device-width, initial-scale=1.0')
+  // Bootstrap CSS
+  link(href='https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css' rel='stylesheet' integrity='sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC' crossorigin='anonymous')
+  // Browser tab title
+  title Travel Experts
+  // Browser tab logo
+  link(rel='icon' href='./images/logo_te.png' alt='Travel Experts logo. Plane flying around the world')
+// Body
+// Navigation Bar
+nav.navbar.navbar-expand-xl.bg-primary.navbar-dark.mb-4.py-2
+  .container
+    a.navbar-brand(href='#')
+      image(src='./images/logo_te_white.png' width='60' hieght='60' alt='Travel Experts logo. Plane flying around the world')
+    button.navbar-toggler(type='button' data-bs-toggle='collapse' data-bs-target='#navbarText' aria-controls='navbarText' aria-expanded='false' aria-label='Toggle navigation')
+      span.navbar-toggler-icon
+    #navbarText.collapse.navbar-collapse
+      .navbar-nav.ms-auto
+        a.nav-item.nav-link(href='./') Home
+        a.nav-item.nav-link.active(aria-current='page' href='./packages') Travel Packages
+        a.nav-item.nav-link(href='./register') Register
+        a.nav-item.nav-link(href='./about') About Us
+        a.nav-item.nav-link(href='./contact') Contact Us
+// Travel Experts logo
+header
+  .container-fluid.text-center
+    img.img(style='width: 150px' src='./images/logo_te.png' alt='Travel Experts logo. Plane flying around the world')
+  // Travel Experts title and tag line
+  h1.text-center.mt-4 Travel Experts
+  h5.text-center.fst-italic.mb-5.fw-bold
+    | Discover your new favourite destination!
+  h1.text-center.mt-4 Travel Packages
+  h6.text-center.text-danger.mt-4.fw-bold
+    | Travel Packages are coming soon. 
+    br
+    | Contact us for current Travel Package
+    |         details.
+// Under construction image
+.d-flex.m-5.justify-content-center.align-items-center
+  img.img-fluid(src='./images/under_construction.jpg' width='1500px' hieght='auto' alt='under construction sign on laptop keyboard')
+// Footer / copywrite information
+footer.footer.mt-4.py-4.bg-primary
+  .container
+    .row
+      .col-sm.text-dark.text-center.fw-bold
+        | Travel Experts - Calgary
+        br
+        | 123 1st Street S.W.
+        br
+        | Calgary, Alberta
+        br
+        | 1-800-555-1212
+        br
+        | calgary@travelexperts.ca
+      .col-sm.text-dark.text-center.fw-bold
+        | &copy; Travel Experts
+        br
+        | (copyright 2021)
+        br
+        | All Rights Reserved.
+      .col-sm.text-dark.text-justify-left.text-center.fw-bold
+        | Travel Experts - Okotoks
+        br
+        | 456 2nd Avenue
+        br
+        | Okotoks, Alberta
+        br
+        | 1-800-222-1515
+        br
+        | okotoks@travelexperts.ca
+// Bootstrap / Popper
+script(src='https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js' integrity='sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM' crossorigin='anonymous')

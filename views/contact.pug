@@ -1,0 +1,226 @@
+doctype html
+// Author - Tracy Crape
+// Student ID 420488
+// July 16, 2021
+// CPRG-008/210 - Web Application Concepts
+// Assignment 1 - Day 1 t0 7 Daily Exercises
+// Head
+head
+  // Required metadata
+  meta(charset='UTF-8')
+  meta(http-equiv='X-UA-Compatible' content='IE=edge')
+  meta(name='viewport' content='width=device-width, initial-scale=1.0')
+  // Bootstrap CSS
+  link(href='https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css' rel='stylesheet' integrity='sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC' crossorigin='anonymous')
+  // Browser tab title
+  title Travel Experts
+  // Browser tab logo
+  link(rel='icon' href='./images/logo_te.png')
+// Body
+// Navigation bar
+nav.navbar.navbar-expand-xl.bg-primary.navbar-dark.mb-4.py-2
+  .container
+    a.navbar-brand(href='#')
+      image(src='./images/logo_te_white.png' width='60' alt='Travel Experts logo')
+    button.navbar-toggler(type='button' data-bs-toggle='collapse' data-bs-target='#navbarText' aria-controls='navbarText' aria-expanded='false' aria-label='Toggle navigation')
+      span.navbar-toggler-icon
+    #navbarText.collapse.navbar-collapse
+      .navbar-nav.ms-auto
+        a.nav-item.nav-link(href='./') Home
+        a.nav-item.nav-link(href='./packages') Travel Packages
+        a.nav-item.nav-link(href='./register') Register
+        a.nav-item.nav-link(href='./about') About Us
+        a.nav-item.nav-link.active(aria-current='page' href='./contact') Contact Us
+// Travel Experts logo
+header
+  .container-fluid.text-center
+    img.img(style='width: 150px' src='./images/logo_te.png' alt='A plane circling the world')
+  // Travel Experts title and tag line
+  h1.text-center.mt-4 Travel Experts
+  h5.text-center.fst-italic.mb-5.fw-bold Discover your new favourite destination!
+  h2.text-center.mb-5.mt-4.fw-bold  Contact us!
+  .container-fluid.border.d-flex.flex-column.align-items-center(style="width:50%")
+    form.form-horizontal.border.flex-fill(action='/contact' method='POST' style="width:100%")
+      fieldset
+        legend.text-center Contact us
+        // Name input
+        .form-group
+          label.col-md-3.control-label(for='name') Name
+          .col-md-9
+          input#name.form-control(name='name' type='text' placeholder='Your name')
+        // Email input
+        .form-group
+          label.col-md-3.control-label(for='email') Your E-mail
+          .col-md-9
+          input#email.form-control(name='email' type='text' placeholder='Your email')
+        // Message body
+        .form-group
+          label.col-md-3.control-label(for='message') Your message
+          textarea#message.form-control(name='message' type='text' placeholder='Please enter your message here...' rows='5')
+        // Form actions
+        .d-grid.mt-3.mb-3.gap-3.col-3.mx-auto
+          .form-group
+              button.btn.btn-primary.btn-lg.m-4(type='submit') Submit
+
+// Contct information
+// Calgary address
+.container
+  .row.text-center.fw-bold
+    .col-sm-6
+      h3  Calgary
+      ul(style='list-style: none;')
+        li Travel Experts
+        li 123 1st Street S.W.
+        li Calgary, Alberta
+        li 1-800-555-1212
+        li calgary@travelexperts.ca
+    // Okotoks address
+    .col-sm-6
+      h3.text-center  Okotoks
+      ul(style='list-style: none;')
+        li Travel Experts
+        li 456 2nd Avenue
+        li Okotoks, Alberta
+        li 1-800-222-1515
+        li okotoks@travelexperts.ca
+// Travel agents headings
+.container
+  .row.text-center.fw-bold
+    .col-sm-6
+      h3.mb-3.mt-5   Calgary Travel Agents
+    .col-sm-6
+      h3.mb-3.mt-5   Okotoks Travel Agents
+// Calgary travel agents
+.container.my-3
+  .row.text-center.fw-bold
+    .col-sm-3.pt-3.border-top.border-start.border-bottom.border-5.border-primary
+      ul(style='list-style: none;')
+        li
+          | Agent 1
+          br
+          | 403-555-1213
+          br
+          | agent1@travelexpert.ca
+        br
+        li
+          | Agent 2
+          br
+          | 403-555-1213
+          br
+          | agent2@travelexpert.ca
+        br
+        li
+          | Agent 3
+          br
+          | 403-555-1213
+          br
+          | agent3@travelexpert.ca
+        br
+        li
+          | Agent 4
+          br
+          | 403-555-1213
+          br
+          | agent4@travelexpert.ca
+        br
+        li
+          | Agent 5
+          br
+          | 403-555-1213
+          br
+          | agent5@travelexpert.ca
+        br
+        li
+          | Agent 6
+          br
+          | 403-555-1213
+          br
+          | agent6@travelexpert.ca
+        br
+    .col-sm-3.pt-3.border-top.border-end.border-bottom.border-5.border-primary
+      ul(style='list-style: none;')
+        li
+          image(src='images/Agent_100h-1.jpg' alt='woman smiling')
+        li
+          image(src='images/Agent_100h-2.jpg' alt='woman smiling')
+        li
+          image(src='images/Agent_100h-3.jpg' alt='woman smiling')
+        li
+          image(src='images/Agent_100h-4.jpg' alt='man smiling')
+        li
+          image(src='images/Agent_100h-5.jpg' alt='woman smiling')
+        li
+          image(src='images/Agent_100h-6.jpg' alt='man smiling')
+    // Okotoks travel agents
+    .col-sm-3.pt-3.border-top.border-star.border-bottom.border-5.border-primary
+      ul(style='list-style: none;')
+        li
+          | Agent 11
+          br
+          | 403-222-1516
+          br
+          | agent11@travelexpert.ca
+        br
+        li
+          | Agent 12
+          br
+          | 403-222-1517
+          br
+          | agent12@travelexpert.ca
+        br
+        li
+          | Agent 13
+          br
+          | 403-222-1518
+          br
+          | agent13@travelexpert.ca
+        br
+        li
+          | Agent 14
+          br
+          | 403-222-1519
+          br
+          | agent14@travelexpert.ca
+        br
+    .col-sm-3.pt-3.border-top.border-end.border-bottom.border-5.border-primary
+      ul(style='list-style: none;')
+        li
+          image(src='images/Agent_100h-11.jpg' alt='woman smiling')
+        li
+          image(src='images/Agent_100h-12.jpg' alt='man smiling')
+        li
+          image(src='images/Agent_100h-13.jpg' alt='woman smiling')
+        li
+          image(src='images/Agent_100h-14.jpg' alt='woman smiling')
+// Footer / copywrite information
+footer.footer.mt-4.py-4.bg-primary
+  .container
+    .row
+      .col-sm.text-dark.text-center.fw-bold
+        | Travel Experts - Calgary
+        br
+        | 123 1st Street S.W.
+        br
+        | Calgary, Alberta
+        br
+        | 1-800-555-1212
+        br
+        | calgary@travelexperts.ca
+      .col-sm.text-dark.text-center.fw-bold
+        | &copy; Travel Experts
+        br
+        | (copyright 2021)
+        br
+        | All Rights Reserved.
+      .col-sm.text-dark.text-justify-left.text-center.fw-bold
+        | Travel Experts - Okotoks
+        br
+        | 456 2nd Avenue
+        br
+        | Okotoks, Alberta
+        br
+        | 1-800-222-1515
+        br
+        | okotoks@travelexperts.ca
+// Bootstrap / Popper
+script(src='https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js' integrity='sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM' crossorigin='anonymous')
