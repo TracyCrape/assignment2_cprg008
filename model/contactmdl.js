@@ -1,20 +1,21 @@
-// Require the mongoose module
+// mongoose module
 var mongoose = require('mongoose');
 
-// Set up a mongoose connection
-// var mongoDB = 'mongodb://127.0.0.1/blog';
+// mongoose and database connection
 var mongoDB = "mongodb+srv://tcrape:RI63bLCewI@cluster0.upfni.mongodb.net/myFirstDatabase?retryWrites=true&w=majority"
 mongoose.connect(mongoDB, { useNewUrlParser: true, useUnifiedTopology: true });
 
-// Get the connection
+// Get mongoose connection
 var db = mongoose.connection;
 
-// Bind connection to error event (to get notification of connection errors)
+// Connection errors notification
 db.on('error', console.error.bind(console, 'MongoDB connection error:'));
 
+//confirm connection
 db.once('open',function() {
     console.log("we're connected")})
 
+// Post schema
 const contactPostSchema = new mongoose.Schema({
     name: {
         type: String,

@@ -1,0 +1,8 @@
+{
+    "appService.zipIgnorePattern": [
+        "node_modules{,/**}",
+        ".vscode{,/**}"
+    ],
+    "appService.defaultWebAppToDeploy": "/subscriptions/52b0e483-870d-4144-a1d8-5fb152878965/resourceGroups/Travel_Experts_TracyCrape/providers/Microsoft.Web/sites/TravelExpertsTC",
+    "appService.deploySubpath": "."
+}

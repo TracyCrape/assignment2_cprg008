@@ -1,4 +1,4 @@
-// Using Node.js `require()`
+// Mongoose
 const mongoose = require("mongoose");
 const uniqueValidator = require("mongoose-unique-validator");
 var mongoDBurl =
@@ -11,7 +11,7 @@ mongoose.connect(mongoDBurl /*process.env.MONGO_URL*/, {
 const db = mongoose.connection;
 /// To log the Mongoose erros to the console directly
 db.on("error", console.error.bind(console, "connection error:"));
-
+// Mongose 
 const userSchema = new mongoose.Schema({
   username: {
     type: String,

@@ -8,18 +8,10 @@ router.get('/', function (req, res, next) {
   res.render('index', {
     title: 'Express',
     greeting: rg.greet(),
-    time: moment().format("MMMM Do YYYY, h:mm:ss a"),
+    time: moment().format("MMMM Do YYYY, h:mm a"),
   });
 });
 
-/* GET contact page. */
-// router.get('/contact', function (req, res, next) {
-//   res.render('contact');
-// });
-// router.post('/contact', function (req, res, next) {
-//   console.log(req.body)
-//   res.render('thankyou');
-// });
 /* GET register page. */
 router.get('/register', function (req, res, next) {
   res.render('register');
