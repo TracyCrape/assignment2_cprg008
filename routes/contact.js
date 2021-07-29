@@ -25,7 +25,9 @@ router.post("/", (req, res, next) => {
           });
         }
     
-        res.render("thankyou");
+        res.render("thankyou",{
+          name: contact.name
+        });
       });
     });
 

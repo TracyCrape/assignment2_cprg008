@@ -3,12 +3,14 @@ var rg = require('random-greetings')
 var router = express.Router();
 var moment = require('moment')
 
+const greeting = ["Hello", "Bonjour", "Hi", "Hola", "Ciao", "Kon'nichiwa", "Aloha"];
+
 /* GET home page. */
 router.get('/', function (req, res, next) {
   res.render('index', {
     title: 'Express',
-    greeting: rg.greet(),
-    time: moment().format("MMMM Do YYYY, h:mm a"),
+    greeting: greeting[Math.floor(Math.random() * greeting.length)],
+    time: moment().utc().format("MMMM Do YYYY, h:mm a UTC"),
   });
 });
 
@@ -32,5 +34,4 @@ router.get('/thankyou', function (req, res, next) {
 router.get('/404', function (req, res, next) {
   res.render('404');
 });
-
 module.exports = router;
