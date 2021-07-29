@@ -1,3 +1,9 @@
+//-  Author - Tracy Crape
+//-  Student ID 420488
+//-  July 29, 2021
+//-  CPRG-008/210 - Web Application Concepts
+//-  Assignment 2 - Day 8 until end of Dailt Exercises
+
 const passport = require("passport");
 const bcrypt = require("bcryptjs");
 const LocalStrategy = require("passport-local").Strategy;
